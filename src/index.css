@@ -121,3 +121,26 @@ button:hover {
 .digits button:focus {
   outline: 0;
 }
+
+@media (max-width: 550px) {
+  .digits {
+    gap: 0.24rem;
+  }
+  .calculator {
+    margin: 1.5rem;
+    border: 10px solid var(--border);
+  }
+}
+
+@media (max-width: 320px) {
+  .calculator {
+    margin: 0.5rem;
+    border: 8px solid var(--border);
+  }
+  .operators button {
+    padding: 0.5rem;
+  }
+  .digits {
+    gap: 0;
+  }
+}

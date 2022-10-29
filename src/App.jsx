@@ -7,6 +7,12 @@ function App() {
   const ops = ["/", "*", "+", "-", "."];
 
   const updateCalc = (value) => {
+    console.log(result.length);
+
+    if (result.length > 6) {
+      console.log("done");
+    }
+
     if (
       (ops.includes(value) && calc === "") ||
       (ops.includes(value) && ops.includes(calc.slice(-1)))
@@ -16,7 +22,6 @@ function App() {
     if (!ops.includes(value)) {
       setResult(eval(calc + value).toString());
     }
-
     setCalc(calc + value);
   };
 
@@ -58,7 +63,7 @@ function App() {
           <button onClick={() => updateCalc("+")}>+</button>
           <button onClick={() => updateCalc("-")}>-</button>
 
-          <button onClick={() => deleteLast()}>AC</button>
+          <button onClick={() => deleteLast()}>del</button>
         </div>
 
         <div className="digits">
