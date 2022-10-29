@@ -88,6 +88,7 @@ button:hover {
   flex: 1 1 0%;
   background-color: var(--accent2);
   font-weight: 400;
+  border: solid 1px var(--border);
 }
 .digits {
   display: flex;
@@ -126,9 +127,13 @@ button:hover {
   .digits {
     gap: 0.24rem;
   }
+  .display {
+    border: 6px solid var(--border);
+  }
   .calculator {
     margin: 1.5rem;
     border: 10px solid var(--border);
+    margin-top: 0;
   }
 }
 
