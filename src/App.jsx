@@ -9,9 +9,9 @@ function App() {
   const updateCalc = (value) => {
     console.log(result.length);
 
-    if (result.length > 6) {
-      console.log("done");
-    }
+    // if (result.length > 6) {
+    //   console.log("done");
+    // }
 
     if (
       (ops.includes(value) && calc === "") ||
