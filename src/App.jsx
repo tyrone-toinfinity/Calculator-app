@@ -61,21 +61,17 @@ function App() {
     <div className="App">
       <div className="calculator">
         <div className="display">
-          {result ? <span>( {result} )</span> : ""} {calc || "0"}
+          {calc || "0"}
           &nbsp;
         </div>
         <div className="operators">
+          <button onClick={() => deleteAll()}>AC</button>
           <button onClick={() => updateCalc("/")}>/</button>
-          <button onClick={() => updateCalc("*")}>*</button>
+          <button onClick={() => updateCalc("*")}>X</button>
           <button onClick={() => updateCalc("+")}>+</button>
           <button onClick={() => updateCalc("-")}>-</button>
 
-          <button
-            onClick={() => deleteLast()}
-            onDoubleClick={() => deleteAll()}
-          >
-            del
-          </button>
+          <button onClick={() => deleteLast()}>del</button>
         </div>
 
         <div className="digits">
